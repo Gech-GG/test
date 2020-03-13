@@ -1,0 +1,35 @@
+#%RAML 1.0
+version: V1
+title: Students Data API
+
+/student:
+  get:
+    queryParameters:
+      id:
+        example: "12345"
+        required: true
+      
+    responses:
+      200:
+        description: Ok response
+        body:
+          application/json:
+            example:
+              {
+         "id": "12333",
+         
+              }
+    
+      500:
+        body:
+          application/json:
+            example:
+              {"Internal error "}
+  post:
+    body:
+      application/json:
+        example:
+          {
+            "message": "Hello"
+          }
+    
